@@ -341,32 +341,70 @@ h3 {
   font-weight: 700;
 }
 
-/* Responsivo */
+/* ...existing code... */
+
+/* Responsividade para tablets e celulares */
 @media (max-width: 900px) {
-  .hero-flex {
+  .header-flex, .hero-flex, .cards-grid, .speakers-list {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 2rem;
+    align-items: stretch;
   }
-  .hero-image {
-    align-self: center;
+  .nav-modern {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
   }
-  .header-flex {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+  .hero-info, .hero-image {
+    width: 100%;
+    margin: 0;
+  }
+  .container {
+    padding: 16px;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .speakers-list {
+    gap: 16px;
   }
 }
+
 @media (max-width: 600px) {
-  .container {
-    padding: 0 1rem;
+  .header-modern {
+    padding: 12px 0;
   }
-  .form-modern {
-    padding: 1.2rem;
+  .logo img {
+    max-width: 90px;
   }
-  .hero-info h1 {
-    font-size: 2rem;
+  .nav-modern a {
+    font-size: 1rem;
+    padding: 8px 6px;
   }
+  h1, h2, h3 {
+    font-size: 1.2em;
+  }
+  .form-modern input, .form-modern select, .form-modern button {
+    font-size: 1em;
+    padding: 10px;
+  }
+  .event-highlights {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .countdown {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+/* Garante que imagens e vídeos não ultrapassem o container */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+
 }
 .event-highlights {
   display: flex;
